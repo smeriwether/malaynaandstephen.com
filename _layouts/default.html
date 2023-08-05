@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+    <script src="{{ base.url | prepend: site.url }}/assets/js/nav.js"></script>
+  </head>
+
+  <body class="text-[#333] bg-[#f9f4f0]">
+    <div class="mt-0 max-w-[1056px] mx-auto bg-[#f9f9f9] px-6 md:mt-8 md:p-10 lg:mt-0">
+      <nav class="mb-3 md:mt-6 md:mb-10">
+        {% include nav.html %}
+      </nav>
+  
+      <main class="pb-6 md:pt-4 md:px-24 md:py-8 flex flex-col items-center">
+        {{ content }}
+      </main>
+    </div>
+  </body>
+
+  <script>
+    var weddingDate = new Date(2024, 4, 25);
+    var today = new Date();
+    var weekdays = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+    console.log(`
+      Hi 👋. Welcome to our wedding website, I can't believe our wedding is only ${Math.round(Math.abs(weddingDate - today) / (24 * 60 * 60 * 1000))} days away!.
+
+      If you're wondering how I built this site, I have good news, it's open source! Take a look at
+      the site on Github here: https://github.com/smeriwether/malaynaandstephen.com.
+
+      Enjoy the rest of your ${weekdays[today.getDay()]}.
+   `);
+  </script>
+</html>
