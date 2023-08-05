@@ -37,28 +37,28 @@
   </header>
 
   {% assign current = page.url | downcase | split: '/' %}
-  <ol class="hidden invisible w-full md:grid gap-2 grid-cols-5 grid-rows-1 items-center uppercase text-sm md:visible">
+  <ol class="hidden invisible w-full md:grid gap-2 grid-cols-5 grid-rows-1 items-center uppercase text-sm md:visible" role="menu">
     <hr />
     {% if page.active == "story" %}
-      <li class="text-center underline">
+      <li class="text-center underline" role="presentation">
     {% else %}
-      <li class="text-center">
+      <li class="text-center" role="presentation">
     {% endif %}
-      <a href="/">Our story</a>
+      <a href="/" role="menu-item">Our story</a>
     </li>
     {% if page.active == "details" %}
-      <li class="text-center underline">
+      <li class="text-center underline" role="presentation">
     {% else %}
-      <li class="text-center">
+      <li class="text-center" role="presentation">
     {% endif %}
-      <a href="/details">Details</a>
+      <a href="/details" role="menu-item">Details</a>
     </li>
     {% if page.active == "rsvp" %}
-      <li class="text-center underline">
+      <li class="text-center underline" role="presentation">
     {% else %}
-      <li class="text-center">
+      <li class="text-center" role="presentation">
     {% endif %}
-      <a href="/">RSVP</a>
+      <a href="/" role="menu-item">RSVP</a>
     </li>
     <hr />
   </ol>
