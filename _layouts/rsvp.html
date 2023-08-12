@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+    <script src="{{ base.url }}/assets/js/rsvp.js"></script>
+  </head>
+
+  <body class="text-[#333] bg-[#f9f4f0]">
+    <main class="h-full">
+      {{ content }}
+    </main>
+  </body>
+
+  <script>
+    var weddingDate = new Date(2024, 4, 25);
+    var today = new Date();
+    var weekdays = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+    console.log(`
+      Hi 👋. Welcome to our wedding website, I can't believe our wedding is only ${Math.round(Math.abs(weddingDate - today) / (24 * 60 * 60 * 1000))} days away!.
+
+      If you're wondering how I built this site, I have good news, it's open source! Take a look at
+      the site on Github here: https://github.com/smeriwether/malaynaandstephen.com.
+
+      Enjoy the rest of your ${weekdays[today.getDay()]}.
+   `);
+  </script>
+</html>

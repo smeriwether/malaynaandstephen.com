@@ -10,5 +10,7 @@ function menuClickHandler(event) {
 
 document.addEventListener("DOMContentLoaded", function() {
   const mobileMenuBtn = document.querySelector('#mobile-menu-btn');
-  mobileMenuBtn.addEventListener('click', menuClickHandler);
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', menuClickHandler);
+  }
 });
