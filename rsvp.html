@@ -3,8 +3,8 @@ layout: rsvp
 active: rsvp
 ---
 
-<div class="w-full grid grid-cols-1 lg:h-full lg:grid-cols-2 xl:grid-cols-[1fr_1.5fr]" id="rsvp-page">
-  <div class="h-full blur-none bg-[url('/assets/rsvp.jpg')] bg-no-repeat bg-[length:100%_100%] lg:bg-contain">
+<div class="w-full grid grid-cols-1 lg:h-full lg:grid-cols-2 xl:grid-cols-[1.2fr_1.5fr] 2xl:grid-cols-[1fr_1.5fr] justify-center items-center" id="rsvp-page">
+  <div class="h-full blur-none bg-[url('/assets/rsvp.jpg')] bg-no-repeat bg-[length:100%_100%]">
   </div>
 
   <div class="absolute top-0 bottom-0 left-0 right-0 backdrop-blur-lg lg:hidden" id="rsvp-mobile-pane-1">
@@ -13,36 +13,36 @@ active: rsvp
   <div class="absolute top-0 bottom-0 left-0 right-0 bg-white opacity-50 lg:hidden" id="rsvp-mobile-pane-2">
   </div>
 
-  <section class="absolute lg:static lg:overflow-scroll" id="rsvp-form">
+  <section class="w-full absolute lg:w-auto lg:static lg:overflow-scroll" id="rsvp-form">
     <div class="flex justify-center items-center min-h-full">
     <div class="p-8 lg:p-12 xl:p-8 max-w-[600px] flex flex-col justify-center items-center">
       <header class="text-center mb-10">
-        <h1 class="text-4xl font-bold mb-3">Malayna & Stephen</h1>
+        <h1 class="text-3xl md:text-4xl font-bold mb-2 md:mb-3">Malayna & Stephen</h1>
         <p>May 25, 2024</p>
       </header>
 
-      <p class="text-center mb-12">
+      <p class="text-sm text-center mb-12 md:text-base">
         The ceremony and reception will be held at‍<br />
-        <strong class="font-bold">The Harro East Ballroom in Rochester, NY at 5PM</strong>
+        <strong class="text-base font-bold">The Harro East Ballroom in Rochester, NY at 5PM</strong>
       </p>
 
       <form class="w-full" action="https://submit-form.com/6W4EHSdB">
         <div class="mb-8">
-          <label class="font-bold mb-2" for="email">Email</label>
+          <label class="font-bold mb-2 text-sm md:text-base" for="email">Email</label>
           <input id="email" name="email" type="email" class="bg-white w-full my-1.5 rounded-sm p-2 border" required />
-          <span class="text-xs italic">We'll be sending updates as the wedding gets closer.</span>
+          <span class="text-xs italic leading-3">We'll be sending updates as the wedding gets closer.</span>
         </div>
 
         <div class="mb-8">
-          <label for="attendees" class="font-bold mb-2">Who will be attending</label>
+          <label for="attendees" class="font-bold mb-2 text-sm md:text-base">Who will be attending</label>
           <input id="attendees" name="attendees" type="text" class="w-full my-1.5 rounded-sm p-2 border" required />
-          <span class="text-xs italic">Please include full names of all guests planning to attend, including children.</span>
+          <span class="text-xs italic leading-3">Please include full names of all guests planning to attend, including children.</span>
         </div>
 
         <div class="mb-8">
-          <label for="restrictions" class="font-bold mb-2">Dietary Restrictions</label>
-          <textarea id="restrictions" name="restrictions" rows="3" class="w-full my-1.5 rounded-sm p-2 border" required></textarea>
-          <span class="text-xs italic">Please include serious allergies and dietary restrictions (vegetarian, gluten free, etc.)</span>
+          <label for="restrictions" class="font-bold mb-2 text-sm md:text-base">Dietary Restrictions</label>
+          <textarea id="restrictions" name="restrictions" rows="2" class="w-full my-1 rounded-sm p-2 border md:my-1.5" required></textarea>
+          <span class="text-xs italic leading-3">Please include serious allergies and dietary restrictions (vegetarian, gluten free, etc.)</span>
         </div>
 
         <div class="mb-8">
