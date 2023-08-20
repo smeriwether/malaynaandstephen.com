@@ -7,30 +7,24 @@
       aria-labelledby="mobile-menu-btn"
     >
       {% if page.active == "story" %}
-      <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
-        {% else %}
-      </li>
-
-      <li class="mb-3 text-center hover:text-gray-800" role="presentation">
-        {% endif %}
+        <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
+      {% else %}
+        <li class="mb-3 text-center hover:text-gray-800" role="presentation">
+      {% endif %}
         <a href="/" role="menu-item">Our story</a>
       </li>
       {% if page.active == "details" %}
-      <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
-        {% else %}
-      </li>
-
-      <li class="mb-3 text-center hover:text-gray-800" role="presentation">
-        {% endif %}
+        <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
+      {% else %}
+        <li class="mb-3 text-center hover:text-gray-800" role="presentation">
+      {% endif %}
         <a href="/details" role="menu-item">Details</a>
       </li>
       {% if page.active == "rsvp" %}
-      <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
-        {% else %}
-      </li>
-
-      <li class="mb-3 text-center hover:text-gray-800" role="presentation">
-        {% endif %}
+        <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
+      {% else %}
+        <li class="mb-3 text-center hover:text-gray-800" role="presentation">
+      {% endif %}
         <a href="/rsvp" role="menu-item">RSVP</a>
       </li>
     </ol>
