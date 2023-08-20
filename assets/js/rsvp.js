@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
+  setRsvpBackgroundHeight();
+});
+
+function setRsvpBackgroundHeight() {
   const rsvpPage = document.querySelector('#rsvp-page');
   const rsvpForm = document.querySelector('#rsvp-form');
   const rsvpMobilePane1 = document.querySelector('#rsvp-mobile-pane-1');
@@ -17,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
       rsvpMobilePane2.style.minHeight = `${formHeight}px`;
     }
   }
-});
+}
 
 function attending(isAttending) {
   if (isAttending) {
@@ -27,6 +31,7 @@ function attending(isAttending) {
     attendingQuestionInput.classList.add("hidden");
     attendingYesFormInputs.classList.remove("hidden");
     attendingNoFormInputs.remove();
+    setRsvpBackgroundHeight();
   } else {
     const attendingQuestionInput = document.querySelector('#attending-question-inputs');
     const attendingYesFormInputs = document.querySelector('#attending-yes-form-inputs');
@@ -34,5 +39,6 @@ function attending(isAttending) {
     attendingQuestionInput.classList.add("hidden");
     attendingNoFormInputs.classList.remove("hidden");
     attendingYesFormInputs.remove();
+    setRsvpBackgroundHeight();
   }
 }
