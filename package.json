@@ -1,8 +1,13 @@
 {
+  "scripts": {
+    "prettier": "prettier . --write"
+  },
   "dependencies": {
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
+    "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.3",
     "tailwindcss": "^3.1.8"
   }
 }

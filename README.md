@@ -12,4 +12,3 @@ My wedding website, see it at [malaynaandstephen.com](malaynaandstephen.com).
 ### Running the website
 
 `bundle exec jekyll serve`
-

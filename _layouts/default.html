@@ -1,39 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     {% include head.html %}
     <style type="text/css">
       @font-face {
-        font-family: 'BestLight';
+        font-family: "BestLight";
         font-style: normal;
         font-weight: normal;
         font-display: block;
-        src: url("assets/fonts/BestLight/BestLight-Regular.woff2") format("woff2"),
-             url("assets/fonts/BestLight/BestLight-Regular.woff") format("woff");
+        src:
+          url("assets/fonts/BestLight/BestLight-Regular.woff2") format("woff2"),
+          url("assets/fonts/BestLight/BestLight-Regular.woff") format("woff");
       }
     </style>
     <script src="{{ base.url }}/assets/js/nav.js"></script>
   </head>
 
-  <body class="text-[#333] bg-[#f9f4f0]">
-    <div class="mt-0 max-w-[1056px] mx-auto bg-[#f9f9f9] px-6 md:mt-8 md:p-10 lg:mt-0">
-      <nav class="mb-3 md:mt-6 md:mb-10">
-        {% include nav.html %}
-      </nav>
-  
-      <main class="pb-6 md:pt-4 md:px-24 md:py-8 md:mb-12 flex flex-col items-center">
+  <body class="bg-[#f9f4f0] text-[#333]">
+    <div
+      class="mx-auto mt-0 max-w-[1056px] bg-[#f9f9f9] px-6 md:mt-8 md:p-10 lg:mt-0"
+    >
+      <nav class="mb-3 md:mb-10 md:mt-6">{% include nav.html %}</nav>
+
+      <main
+        class="flex flex-col items-center pb-6 md:mb-12 md:px-24 md:py-8 md:pt-4"
+      >
         {{ content }}
       </main>
 
-      <footer class="flex flex-col justify-center items-center text-center text-sm pb-12">
+      <footer
+        class="flex flex-col items-center justify-center pb-12 text-center text-sm"
+      >
         <picture class="sm:px-2 md:px-0">
-          <source srcset="/assets/logo.png" type="image/png" /> 
+          <source srcset="/assets/logo.png" type="image/png" />
           <img src="/assets/logo.png" height="200" width="200" />
         </picture>
-  
-        <p>
-          Made with ❤️ in Rochester, NY</a>
-        </p>
+
+        <p>Made with ❤️ in Rochester, NY</p>
       </footer>
     </div>
   </body>
@@ -42,17 +45,19 @@
     var weddingDate = new Date(2024, 4, 25);
     var today = new Date();
     var weekdays = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ];
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
 
     console.log(`
-      Hi 👋. Welcome to our wedding website, I can't believe our wedding is only ${Math.round(Math.abs(weddingDate - today) / (24 * 60 * 60 * 1000))} days away!.
+      Hi 👋. Welcome to our wedding website, I can't believe our wedding is only ${Math.round(
+        Math.abs(weddingDate - today) / (24 * 60 * 60 * 1000),
+      )} days away!.
 
       If you're wondering how I built this site, I have good news, it's open source! Take a look at
       the site on Github here: https://github.com/smeriwether/malaynaandstephen.com.

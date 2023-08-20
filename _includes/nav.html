@@ -1,63 +1,84 @@
 <section class="flex flex-col items-center justify-center">
   <div class="w-full md:hidden">
-    <ol id="mobile-menu" class="hidden uppercase border-b b-gray-600 w-full text-center pt-4 pb-2 text-gray-500" role="menu" aria-labelledby="mobile-menu-btn">
+    <ol
+      id="mobile-menu"
+      class="b-gray-600 hidden w-full border-b pb-2 pt-4 text-center uppercase text-gray-500"
+      role="menu"
+      aria-labelledby="mobile-menu-btn"
+    >
       {% if page.active == "story" %}
-        <li class="text-center mb-3 font-bold text-gray-800" role="presentation">
-      {% else %}
-        <li class="text-center mb-3 hover:text-gray-800" role="presentation">
-      {% endif %}
+      <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
+        {% else %}
+      </li>
+
+      <li class="mb-3 text-center hover:text-gray-800" role="presentation">
+        {% endif %}
         <a href="/" role="menu-item">Our story</a>
       </li>
       {% if page.active == "details" %}
-        <li class="text-center mb-3 font-bold text-gray-800 " role="presentation">
-      {% else %}
-        <li class="text-center mb-3 hover:text-gray-800" role="presentation">
-      {% endif %}
+      <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
+        {% else %}
+      </li>
+
+      <li class="mb-3 text-center hover:text-gray-800" role="presentation">
+        {% endif %}
         <a href="/details" role="menu-item">Details</a>
       </li>
       {% if page.active == "rsvp" %}
-        <li class="text-center mb-3 font-bold text-gray-800 " role="presentation">
-      {% else %}
-        <li class="text-center mb-3 hover:text-gray-800" role="presentation">
-      {% endif %}
+      <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
+        {% else %}
+      </li>
+
+      <li class="mb-3 text-center hover:text-gray-800" role="presentation">
+        {% endif %}
         <a href="/rsvp" role="menu-item">RSVP</a>
       </li>
     </ol>
 
-    <div class="w-full text-center border-b b-gray-600">
-      <button id="mobile-menu-btn" class="w-full py-3 uppercase text-gray-600 hover:text-gray-800">
+    <div class="b-gray-600 w-full border-b text-center">
+      <button
+        id="mobile-menu-btn"
+        class="w-full py-3 uppercase text-gray-600 hover:text-gray-800"
+      >
         Menu
       </button>
     </div>
   </div>
 
-  <header class="mt-6 mb-5 md:mt-5 md:mb-12 flex flex-col items-center text-center">
-    <h1 class="font-bold text-3xl sm:text-4xl md:text-5xl mb-3">Malayna & Stephen</h1>
+  <header
+    class="mb-5 mt-6 flex flex-col items-center text-center md:mb-12 md:mt-5"
+  >
+    <h1 class="mb-3 text-3xl font-bold sm:text-4xl md:text-5xl">
+      Malayna & Stephen
+    </h1>
     <span class="text-sm">May 25, 2024</span>
   </header>
 
   {% assign current = page.url | downcase | split: '/' %}
-  <ol class="hidden invisible w-full md:grid gap-2 grid-cols-5 grid-rows-1 items-center uppercase text-sm md:visible" role="menu">
+  <ol
+    class="invisible hidden w-full grid-cols-5 grid-rows-1 items-center gap-2 text-sm uppercase md:visible md:grid"
+    role="menu"
+  >
     <hr />
     {% if page.active == "story" %}
-      <li class="text-center underline" role="presentation">
-    {% else %}
-      <li class="text-center" role="presentation">
-    {% endif %}
+    <li class="text-center underline" role="presentation">{% else %}</li>
+
+    <li class="text-center" role="presentation">
+      {% endif %}
       <a href="/" role="menu-item">Our story</a>
     </li>
     {% if page.active == "details" %}
-      <li class="text-center underline" role="presentation">
-    {% else %}
-      <li class="text-center" role="presentation">
-    {% endif %}
+    <li class="text-center underline" role="presentation">{% else %}</li>
+
+    <li class="text-center" role="presentation">
+      {% endif %}
       <a href="/details" role="menu-item">Details</a>
     </li>
     {% if page.active == "rsvp" %}
-      <li class="text-center underline" role="presentation">
-    {% else %}
-      <li class="text-center" role="presentation">
-    {% endif %}
+    <li class="text-center underline" role="presentation">{% else %}</li>
+
+    <li class="text-center" role="presentation">
+      {% endif %}
       <a href="/rsvp" role="menu-item">RSVP</a>
     </li>
     <hr />

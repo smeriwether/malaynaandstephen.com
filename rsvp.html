@@ -3,85 +3,168 @@ layout: rsvp
 active: rsvp
 ---
 
-<div class="w-full grid grid-cols-1 lg:h-full lg:grid-cols-2 xl:grid-cols-[1.2fr_1.5fr] 2xl:grid-cols-[1fr_1.5fr] justify-center items-center" id="rsvp-page">
-  <div class="h-full blur-none bg-[url('/assets/rsvp.jpg')] bg-no-repeat bg-[length:100%_100%]">
-  </div>
+<div
+  class="grid w-full grid-cols-1 items-center justify-center lg:h-full lg:grid-cols-2 xl:grid-cols-[1.2fr_1.5fr] 2xl:grid-cols-[1fr_1.5fr]"
+  id="rsvp-page"
+>
+  <div
+    class="h-full bg-[url('/assets/rsvp.jpg')] bg-[length:100%_100%] bg-no-repeat blur-none"
+  ></div>
 
-  <div class="absolute top-0 bottom-0 left-0 right-0 backdrop-blur-lg lg:hidden" id="rsvp-mobile-pane-1">
-  </div>
+  <div
+    class="absolute bottom-0 left-0 right-0 top-0 backdrop-blur-lg lg:hidden"
+    id="rsvp-mobile-pane-1"
+  ></div>
 
-  <div class="absolute top-0 bottom-0 left-0 right-0 bg-white opacity-50 lg:hidden" id="rsvp-mobile-pane-2">
-  </div>
+  <div
+    class="absolute bottom-0 left-0 right-0 top-0 bg-white opacity-50 lg:hidden"
+    id="rsvp-mobile-pane-2"
+  ></div>
 
-  <section class="w-full absolute lg:w-auto lg:static lg:overflow-scroll" id="rsvp-form">
-    <div class="flex justify-center items-center min-h-full">
-    <div class="p-8 lg:p-12 xl:p-8 max-w-[600px] flex flex-col justify-center items-center">
-      <header class="text-center mb-10">
-        <h1 class="text-3xl md:text-4xl font-bold mb-2 md:mb-3">Malayna & Stephen</h1>
-        <p>May 25, 2024</p>
-      </header>
+  <section
+    class="absolute w-full lg:static lg:w-auto lg:overflow-scroll"
+    id="rsvp-form"
+  >
+    <div class="flex min-h-full items-center justify-center">
+      <div
+        class="flex max-w-[600px] flex-col items-center justify-center p-8 lg:p-12 xl:p-8"
+      >
+        <header class="mb-10 text-center">
+          <h1 class="mb-2 text-3xl font-bold md:mb-3 md:text-4xl">
+            Malayna & Stephen
+          </h1>
+          <p>May 25, 2024</p>
+        </header>
 
-      <p class="text-sm text-center mb-12 md:text-base">
-        The ceremony and reception will be held at‍<br />
-        <strong class="text-base font-bold">The Harro East Ballroom in Rochester, NY at 5PM</strong>
-      </p>
+        <p class="mb-12 text-center text-sm md:text-base">
+          The ceremony and reception will be held at‍<br />
+          <strong class="text-base font-bold"
+            >The Harro East Ballroom in Rochester, NY at 5PM</strong
+          >
+        </p>
 
-      <form class="w-full" action="https://submit-form.com/6W4EHSdB">
-        <input type="hidden" name="_redirect" value="https://malaynaandstephen.com/thanks" />
+        <form class="w-full" action="https://submit-form.com/6W4EHSdB">
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://malaynaandstephen.com/thanks"
+          />
 
-        <div class="mb-8" id="attending-question-inputs">
-          <p class="font-bold mb-2 text-center">Will you be attending?</p>
-          <div class="flex flex-col justify-center md:flex-row md:items-center">
-            <button class="w-full md:w-1/2 mb-2 md:mb-0 md:mr-2 rounded-sm border bg-white py-2 hover:bg-gray-50" onclick="event.preventDefault(); attending(true);">Yes</button>
-            <button class="w-full md:w-1/2 rounded-sm border bg-white py-2  hover:bg-gray-50" onclick="event.preventDefault(); attending(false);">No</button>
-          </div>
-        </div>
-
-        <div id="attending-yes-form-inputs" class="hidden">
-          <input type="hidden" name="is-attending" value="Yes" />
-
-          <div class="mb-8">
-            <label class="font-bold mb-2" for="email">Your Email</label>
-            <input id="email" name="email" type="email" class="bg-white w-full my-1.5 rounded-sm p-2 border" required />
-            <span class="text-xs italic">We'll be sending updates as the wedding gets closer.</span>
-          </div>
-
-          <div class="mb-8">
-            <label for="attendees" class="font-bold mb-2">Who will be attending</label>
-            <input id="attendees" name="attendees" type="text" class="w-full my-1.5 rounded-sm p-2 border" required />
-            <span class="text-xs italic">Please include full names of all guests planning to attend, including children.</span>
-          </div>
-
-          <div class="mb-8">
-            <label for="restrictions" class="font-bold mb-2">Dietary Restrictions</label>
-            <textarea id="restrictions" name="restrictions" rows="3" class="w-full my-1.5 rounded-sm p-2 border" required></textarea>
-            <span class="text-xs italic">Please include serious allergies and dietary restrictions (vegetarian, gluten free, etc.)</span>
-          </div>
-
-          <div class="mb-8">
-            <button type="submit" class="w-full py-3 bg-[#505a32] text-white rounded-sm">RSVP</button>
-          </div>
-        </div>
-
-        <div id="attending-no-form-inputs" class="hidden">
-          <input type="hidden" name="is-attending" value="No" />
-
-          <div class="mb-8 w-full">
-            <label class="font-bold mb-2" for="name">Your name</label>
-            <input id="name" name="name" type="name" class="bg-white w-full my-1.5 rounded-sm p-2 border" required />
-            <span class="text-xs italic">Please only RSVP 'No' if no one in your family will be able to attend. If only some will be attending please indicate who by RSVPing 'Yes'.</span>
+          <div class="mb-8" id="attending-question-inputs">
+            <p class="mb-2 text-center font-bold">Will you be attending?</p>
+            <div
+              class="flex flex-col justify-center md:flex-row md:items-center"
+            >
+              <button
+                class="mb-2 w-full rounded-sm border bg-white py-2 hover:bg-gray-50 md:mb-0 md:mr-2 md:w-1/2"
+                onclick="event.preventDefault(); attending(true);"
+              >
+                Yes
+              </button>
+              <button
+                class="w-full rounded-sm border bg-white py-2 hover:bg-gray-50 md:w-1/2"
+                onclick="event.preventDefault(); attending(false);"
+              >
+                No
+              </button>
+            </div>
           </div>
 
-          <div class="mb-8">
-            <button type="submit" class="w-full py-3 bg-[#505a32] text-white rounded-sm">RSVP</button>
-          </div>
-        </div>
+          <div id="attending-yes-form-inputs" class="hidden">
+            <input type="hidden" name="is-attending" value="Yes" />
 
-        <div class="my-8 text-center">
-          <a class="underline" href="/">Return to website</a>
-        </div>
-      </form>
+            <div class="mb-8">
+              <label class="mb-2 font-bold" for="email">Your Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="my-1.5 w-full rounded-sm border bg-white p-2"
+                required
+              />
+              <span class="text-xs italic"
+                >We'll be sending updates as the wedding gets closer.</span
+              >
+            </div>
+
+            <div class="mb-8">
+              <label for="attendees" class="mb-2 font-bold"
+                >Who will be attending</label
+              >
+              <input
+                id="attendees"
+                name="attendees"
+                type="text"
+                class="my-1.5 w-full rounded-sm border p-2"
+                required
+              />
+              <span class="text-xs italic"
+                >Please include full names of all guests planning to attend,
+                including children.</span
+              >
+            </div>
+
+            <div class="mb-8">
+              <label for="restrictions" class="mb-2 font-bold"
+                >Dietary Restrictions</label
+              >
+              <textarea
+                id="restrictions"
+                name="restrictions"
+                rows="3"
+                class="my-1.5 w-full rounded-sm border p-2"
+                required
+              ></textarea>
+              <span class="text-xs italic"
+                >Please include serious allergies and dietary restrictions
+                (vegetarian, gluten free, etc.)</span
+              >
+            </div>
+
+            <div class="mb-8">
+              <button
+                type="submit"
+                class="w-full rounded-sm bg-[#505a32] py-3 text-white"
+              >
+                RSVP
+              </button>
+            </div>
+          </div>
+
+          <div id="attending-no-form-inputs" class="hidden">
+            <input type="hidden" name="is-attending" value="No" />
+
+            <div class="mb-8 w-full">
+              <label class="mb-2 font-bold" for="name">Your name</label>
+              <input
+                id="name"
+                name="name"
+                type="name"
+                class="my-1.5 w-full rounded-sm border bg-white p-2"
+                required
+              />
+              <span class="text-xs italic"
+                >Please only RSVP 'No' if no one in your family will be able to
+                attend. If only some will be attending please indicate who by
+                RSVPing 'Yes'.</span
+              >
+            </div>
+
+            <div class="mb-8">
+              <button
+                type="submit"
+                class="w-full rounded-sm bg-[#505a32] py-3 text-white"
+              >
+                RSVP
+              </button>
+            </div>
+          </div>
+
+          <div class="my-8 text-center">
+            <a class="underline" href="/">Return to website</a>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
   </section>
 </div>
