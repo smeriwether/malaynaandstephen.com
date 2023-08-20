@@ -18,3 +18,21 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 });
+
+function attending(isAttending) {
+  if (isAttending) {
+    const attendingQuestionInput = document.querySelector('#attending-question-inputs');
+    const attendingYesFormInputs = document.querySelector('#attending-yes-form-inputs');
+    const attendingNoFormInputs = document.querySelector('#attending-no-form-inputs');
+    attendingQuestionInput.classList.add("hidden");
+    attendingYesFormInputs.classList.remove("hidden");
+    attendingNoFormInputs.remove();
+  } else {
+    const attendingQuestionInput = document.querySelector('#attending-question-inputs');
+    const attendingYesFormInputs = document.querySelector('#attending-yes-form-inputs');
+    const attendingNoFormInputs = document.querySelector('#attending-no-form-inputs');
+    attendingQuestionInput.classList.add("hidden");
+    attendingNoFormInputs.classList.remove("hidden");
+    attendingYesFormInputs.remove();
+  }
+}
