@@ -23,7 +23,7 @@ active: rsvp
 
   <section
     class="absolute w-full lg:static lg:h-full lg:w-auto lg:overflow-scroll"
-    id="rsvp-form"
+    id="rsvp-form-pane"
   >
     <div class="flex min-h-full items-center justify-center">
       <div
@@ -36,14 +36,22 @@ active: rsvp
           <p>May 25, 2024</p>
         </header>
 
-        <p class="mb-12 text-center text-sm md:text-base">
+        <p class="mb-4 text-center text-sm md:text-base" id="rsvp-details">
+          Please RSVP by May 1, 2024
+        </p>
+
+        <p class="mb-12 text-center text-sm md:text-base" id="wedding-details">
           The ceremony and reception will be held at‍<br />
           <strong class="text-base font-bold"
             >The Harro East Ballroom in Rochester, NY at 5PM</strong
           >
         </p>
 
-        <form class="w-full" action="https://submit-form.com/6W4EHSdB">
+        <form
+          class="w-full"
+          action="https://submit-form.com/6W4EHSdB"
+          id="rsvp-form"
+        >
           <input
             type="hidden"
             name="_redirect"
@@ -159,11 +167,11 @@ active: rsvp
               </button>
             </div>
           </div>
-
-          <div class="my-8 text-center">
-            <a class="underline" href="/">Return to website</a>
-          </div>
         </form>
+
+        <div class="my-8 text-center">
+          <a class="underline" href="/">Return to website</a>
+        </div>
       </div>
     </div>
   </section>

@@ -1,10 +1,26 @@
 document.addEventListener("DOMContentLoaded", function() {
   setRsvpBackgroundHeight();
+  removeRsvpIfAfterRsvpDate();
 });
+
+function removeRsvpIfAfterRsvpDate() {
+  const rsvpDate = new Date(2024, 4, 1);
+  const today = new Date();
+  const daysAway = Math.round(Math.abs(rsvpDate - today) / (24 * 60 * 60 * 1000));
+
+  if (daysAway < 0 || today > rsvpDate) {
+    const rsvpDetails = document.querySelector('#rsvp-details');
+    const weddingDetails = document.querySelector('#wedding-details');
+    const rsvpForm = document.querySelector('#rsvp-form');
+    rsvpForm.innerHTML = "<div class='text-center'><h2>RSVPs are now closed.</h2></div>";
+    rsvpDetails.classList.add("hidden");
+    weddingDetails.classList.add("hidden");
+  }
+}
 
 function setRsvpBackgroundHeight() {
   const rsvpPage = document.querySelector('#rsvp-page');
-  const rsvpForm = document.querySelector('#rsvp-form');
+  const rsvpForm = document.querySelector('#rsvp-form-pane');
   const rsvpMobilePane1 = document.querySelector('#rsvp-mobile-pane-1');
   const rsvpMobilePane2 = document.querySelector('#rsvp-mobile-pane-2');
   const notDesktopOrTablet = document.body.offsetWidth < 1024;
