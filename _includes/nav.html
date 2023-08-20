@@ -3,29 +3,29 @@
     <ol
       id="mobile-menu"
       class="b-gray-600 hidden w-full border-b pb-2 pt-4 text-center uppercase text-gray-500"
-      role="menu"
-      aria-labelledby="mobile-menu-btn"
+      role="navigation"
+      aria-label="Main Navigation"
     >
       {% if page.active == "story" %}
-        <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
+        <li class="mb-3 text-center font-bold text-gray-800">
       {% else %}
-        <li class="mb-3 text-center hover:text-gray-800" role="presentation">
+        <li class="mb-3 text-center hover:text-gray-800">
       {% endif %}
-        <a href="/" role="menu-item">Our story</a>
+        <a href="/">Our story</a>
       </li>
       {% if page.active == "details" %}
-        <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
+        <li class="mb-3 text-center font-bold text-gray-800">
       {% else %}
-        <li class="mb-3 text-center hover:text-gray-800" role="presentation">
+        <li class="mb-3 text-center hover:text-gray-800">
       {% endif %}
-        <a href="/details" role="menu-item">Details</a>
+        <a href="/details">Details</a>
       </li>
       {% if page.active == "rsvp" %}
-        <li class="mb-3 text-center font-bold text-gray-800" role="presentation">
+        <li class="mb-3 text-center font-bold text-gray-800">
       {% else %}
-        <li class="mb-3 text-center hover:text-gray-800" role="presentation">
+        <li class="mb-3 text-center hover:text-gray-800">
       {% endif %}
-        <a href="/rsvp" role="menu-item">RSVP</a>
+        <a href="/rsvp">RSVP</a>
       </li>
     </ol>
 
@@ -51,29 +51,30 @@
   {% assign current = page.url | downcase | split: '/' %}
   <ol
     class="invisible hidden w-full grid-cols-5 grid-rows-1 items-center gap-2 text-sm uppercase md:visible md:grid"
-    role="menu"
+    role="navigation"
+    aria-label="Main Navigation"
   >
     <hr />
     {% if page.active == "story" %}
-    <li class="text-center underline" role="presentation">{% else %}</li>
-
-    <li class="text-center" role="presentation">
-      {% endif %}
-      <a href="/" role="menu-item">Our story</a>
+      <li class="text-center underline">
+    {% else %}
+      <li class="text-center">
+    {% endif %}
+      <a href="/">Our story</a>
     </li>
     {% if page.active == "details" %}
-    <li class="text-center underline" role="presentation">{% else %}</li>
-
-    <li class="text-center" role="presentation">
-      {% endif %}
-      <a href="/details" role="menu-item">Details</a>
+      <li class="text-center underline">
+    {% else %}
+      <li class="text-center">
+    {% endif %}
+      <a href="/details">Details</a>
     </li>
     {% if page.active == "rsvp" %}
-    <li class="text-center underline" role="presentation">{% else %}</li>
-
-    <li class="text-center" role="presentation">
-      {% endif %}
-      <a href="/rsvp" role="menu-item">RSVP</a>
+      <li class="text-center underline">
+    {% else %}
+    <li class="text-center">
+    {% endif %}
+      <a href="/rsvp">RSVP</a>
     </li>
     <hr />
   </ol>
