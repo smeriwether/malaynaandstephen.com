@@ -2,6 +2,16 @@
 <html lang="en">
   <head>
     {% include head.html %}
+    <style type="text/css">
+      @font-face {
+        font-family: 'BestLight';
+        font-style: normal;
+        font-weight: normal;
+        font-display: block;
+        src: url("assets/fonts/BestLight/BestLight-Regular.woff2") format("woff2"),
+             url("assets/fonts/BestLight/BestLight-Regular.woff") format("woff");
+      }
+    </style>
     <script src="{{ base.url }}/assets/js/nav.js"></script>
   </head>
 
@@ -18,7 +28,7 @@
       <footer class="flex flex-col justify-center items-center text-center text-sm pb-12">
         <picture class="sm:px-2 md:px-0">
           <source srcset="/assets/logo.png" type="image/png" /> 
-          <img src="/assets/logo.png" height="250" width="250" />
+          <img src="/assets/logo.png" height="200" width="200" />
         </picture>
   
         <p>
