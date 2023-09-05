@@ -30,21 +30,23 @@ active: rsvp
         class="flex max-w-[600px] flex-col items-center justify-center p-8 lg:p-12 xl:p-8"
       >
         <header class="mb-10 text-center">
-          <h1 class="mb-2 text-3xl font-bold md:mb-3 md:text-4xl">
+          <h1
+            class="mb-2 font-[BestLight] text-3xl font-bold md:mb-3 md:text-5xl"
+          >
             Malayna & Stephen
           </h1>
-          <p>May 25, 2024</p>
+          <p class="mb-4 text-xl">are getting married!</p>
         </header>
 
-        <p class="mb-4 text-center text-sm md:text-base" id="rsvp-details">
-          Please RSVP by May 1, 2024
+        <p class="mb-8 text-center text-sm md:text-base" id="wedding-details">
+          <span class="text-base">Saturday May 25, 2024</span><br />
+          <span class="text-base"
+            >The Harro East Ballroom in Rochester, NY at 5PM</span
+          >
         </p>
 
-        <p class="mb-12 text-center text-sm md:text-base" id="wedding-details">
-          The ceremony and reception will be held at‍<br />
-          <strong class="text-base font-bold"
-            >The Harro East Ballroom in Rochester, NY at 5PM</strong
-          >
+        <p class="mb-12 text-center text-sm md:text-base" id="rsvp-details">
+          Please RSVP by April 16th, 2024
         </p>
 
         <form
@@ -61,7 +63,7 @@ active: rsvp
           <div class="mb-8" id="attending-question-inputs">
             <p class="mb-2 text-center font-bold">Will you be attending?</p>
             <div
-              class="flex flex-col justify-center md:flex-row md:items-center"
+              class="mb-6 flex flex-col justify-center md:flex-row md:items-center"
             >
               <button
                 class="mb-2 w-full rounded-sm border bg-white py-2 hover:bg-gray-50 md:mb-0 md:mr-2 md:w-1/2"
@@ -76,6 +78,11 @@ active: rsvp
                 No
               </button>
             </div>
+
+            <p class="text-sm italic">
+              Please only select 'No' if no one in your party will be able to
+              attend.
+            </p>
           </div>
 
           <div id="attending-yes-form-inputs" class="hidden">
@@ -91,13 +98,13 @@ active: rsvp
                 required
               />
               <span class="text-xs italic"
-                >We'll be sending updates as the wedding gets closer.</span
+                >Stay tuned for updates as the wedding gets closer.</span
               >
             </div>
 
             <div class="mb-8">
               <label for="attendees" class="mb-2 font-bold"
-                >Who will be attending</label
+                >Who will be attending?</label
               >
               <input
                 id="attendees"
@@ -107,8 +114,8 @@ active: rsvp
                 required
               />
               <span class="text-xs italic"
-                >Please include full names of all guests planning to attend,
-                including children.</span
+                >Please include first and last names of all guests planning to
+                attend, including children.</span
               >
             </div>
 
@@ -119,7 +126,7 @@ active: rsvp
               <textarea
                 id="restrictions"
                 name="restrictions"
-                rows="3"
+                rows="2"
                 class="my-1.5 w-full rounded-sm border p-2"
                 required
               ></textarea>
@@ -152,9 +159,8 @@ active: rsvp
                 required
               />
               <span class="text-xs italic"
-                >Please only RSVP 'No' if no one in your family will be able to
-                attend. If only some will be attending please indicate who by
-                RSVPing 'Yes'.</span
+                >Please only select 'No' if no one in your party will be able to
+                attend.</span
               >
             </div>
 
@@ -169,7 +175,7 @@ active: rsvp
           </div>
         </form>
 
-        <div class="my-8 text-center">
+        <div class="my-10 text-center">
           <a class="underline" href="/">Return to website</a>
         </div>
       </div>

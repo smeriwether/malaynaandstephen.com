@@ -29,6 +29,6 @@ function setDaysAway() {
     daysAwaySpan.innerHTML = `We're married!`;
   } else {
     const daysAwaySpan = document.querySelector('#days-away');
-    daysAwaySpan.innerHTML = `${daysAway} days away`;
+    daysAwaySpan.innerHTML = `${daysAway} days to go`;
   }
 }

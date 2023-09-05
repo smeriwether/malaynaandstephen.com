@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function removeRsvpIfAfterRsvpDate() {
-  const rsvpDate = new Date(2024, 4, 1);
+  const rsvpDate = new Date(2024, 3, 16);
   const today = new Date();
   const daysAway = Math.round(Math.abs(rsvpDate - today) / (24 * 60 * 60 * 1000));
 
