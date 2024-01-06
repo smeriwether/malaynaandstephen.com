@@ -21,6 +21,11 @@
   body {
     font-family: "Merriweather", serif;
   }
+
+  gmp-map {
+    height: 100px;
+    width: 300px;
+  }
 }
 
 @layer utilities {

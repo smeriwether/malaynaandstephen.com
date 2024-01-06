@@ -18,6 +18,13 @@
       {% endif %}
         <a href="/details">Details</a>
       </li>
+      {% if page.active == "travel" %}
+        <li class="mb-3 text-center font-bold text-gray-800">
+      {% else %}
+        <li class="mb-3 text-center hover:text-gray-800">
+      {% endif %}
+        <a href="/travel">Travel</a>
+      </li>
       {% if page.active == "rsvp" %}
         <li class="mb-3 text-center font-bold text-gray-800">
       {% else %}
@@ -53,7 +60,7 @@
   {% assign current = page.url | downcase | split: '/' %}
   <nav aria-label="Main Navigation" class="invisible hidden w-full md:visible md:block">
     <ol
-      class="w-full grid-cols-5 grid-rows-1 items-center gap-2 text-sm uppercase md:grid"
+      class="w-full grid-cols-6 grid-rows-1 items-center gap-2 text-sm uppercase md:grid"
     >
       <li><hr /></li>
       {% if page.active == "story" %}
@@ -69,6 +76,13 @@
         <li class="text-center">
       {% endif %}
         <a href="/details">Details</a>
+      </li>
+      {% if page.active == "travel" %}
+        <li class="text-center underline">
+      {% else %}
+        <li class="text-center">
+      {% endif %}
+        <a href="/travel">Travel</a>
       </li>
       {% if page.active == "rsvp" %}
         <li class="text-center underline">
